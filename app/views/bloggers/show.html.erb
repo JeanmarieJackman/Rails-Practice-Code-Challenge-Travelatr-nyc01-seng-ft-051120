@@ -1,0 +1,4 @@
+<p><%= @blogger.name %></p>
+<div>Total Likes: &nbsp; <%= @blogger.counts %></div>
+<%= link_to "Most Liked Post", post_path(@blogger.max_likes)%>
+

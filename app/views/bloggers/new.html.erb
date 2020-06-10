@@ -1,0 +1,21 @@
+<%if flash[:errors]%>
+<ul>
+<%flash[:errors].each do |error| %>
+  <li><%= error %></li>
+<%end%>
+</ul>
+<%end%>
+
+<%= form_for @blogger do |v| %>
+<%= v.label :name %>
+<%= v.text_field :name %><br>
+
+<%= v.label :age %>
+<%= v.text_field :age %><br>
+
+<%= v.label :bio %>
+<%= v.text_area :bio%><br>
+
+<%=  v.submit%>
+
+<% end%>
